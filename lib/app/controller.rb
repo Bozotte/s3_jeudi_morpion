@@ -25,11 +25,12 @@ class Controller
   def update_game
     i = @game.turn_game
 
-    while i < 9
+    while i < 30
     user_choice = @view.choice_player
     
     puts "345"
     @game.board_update(user_choice)
+    
     i += 1    
     end
     

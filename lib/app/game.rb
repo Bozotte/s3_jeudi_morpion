@@ -176,7 +176,7 @@ class Game
         
 
     else
-      puts "iherlr"
+      puts "Rejoue. 'LigneColonne', exemple 'A1'"
     end
 
   end
