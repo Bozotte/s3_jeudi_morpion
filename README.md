@@ -30,4 +30,4 @@ Partie nulle :
 ![](https://media3.giphy.com/media/8b29QJQgVwUW4/giphy.gif?cid=3640f6095c4a78c836306a714de5dd85)
 
 
-ET pour les oreilles ? viens par ici https://www.youtube.com/watch?v=nxg4C365LbQ
+ET pour les oreilles ? viens par [ici](https://www.youtube.com/watch?v=nxg4C365LbQ)
