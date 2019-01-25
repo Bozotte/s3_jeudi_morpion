@@ -2,9 +2,10 @@
 
 class Game
   
-  attr_accessor :win, :nulle
+  attr_accessor :win, :nulle, :piontf #pion true or false
   @win = false
   @nulle = false
+  @piontf = false
   
   #initialise les variables 
   def case_init
@@ -20,7 +21,7 @@ class Game
   end
 
   def board_show
-    puts "            ~~~~~~~~~~"
+    puts "              ~~~~~~~~~~"
     puts " "
     puts "               " + "1" + "   " + "2" + "   " + "3"
     puts " "
@@ -120,9 +121,9 @@ class Game
   def partie_nulle
     point = "."
     if @a1 != point && @a2 != point && @a3 != point && @b1 != point && @b2 != point && @b3 != point && @c1 != point && @c2 != point && @c3 != point
-      puts "            ~~~~~~~~~~"
-      puts "      Partie Nulle. On rejoue ?"
-      puts "            ~~~~~~~~~~"
+      puts "              ~~~~~~~~~~"
+      puts "       Partie Nulle. On rejoue ?"
+      puts "              ~~~~~~~~~~"
       @nulle = true
     end
   end
@@ -135,6 +136,11 @@ class Game
         if @turn%2 == 0 && @a1 != "X" && @a1 != "O"
           
           @a1 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -143,18 +149,28 @@ class Game
         elsif @turn%2 != 0 && @a1 != "X" && @a1 != "O"
           
           @a1 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
         end
 
     when "A2"
         if @turn%2 == 0 && @a2 != "X" && @a2 != "O" 
           @a2 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -162,19 +178,29 @@ class Game
           
         elsif @turn%2 != 0 && @a2 != "X" && @a2 != "O"
           @a2 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
         end
 
     when "A3"
         if @turn%2 == 0 && @a3 != "X" && @a3 != "O" 
           @a3 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -182,15 +208,20 @@ class Game
 
         elsif @turn%2 != 0 && @a3 != "X" && @a3 != "O"
           @a3 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts "            ~~~~~~~~~~"
-          puts  "          occupé, rejoue"
-          puts "            ~~~~~~~~~~"
+          puts "              ~~~~~~~~~~"
+          puts  "        !! occupé, rejoue !!"
+          puts "              ~~~~~~~~~~"
           self.board_show  
 
         end
@@ -198,6 +229,11 @@ class Game
     when "B1"
         if @turn%2 == 0 && @b1 != "X" && @b1 != "O"
           @b1 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x
           self.partie_nulle
@@ -205,13 +241,18 @@ class Game
 
         elsif @turn%2 != 0 && @b1 != "X" && @b1 != "O"
           @b1 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
@@ -219,6 +260,11 @@ class Game
     when "B2"
         if @turn%2 == 0 && @b2 != "X" && @b2 != "O"
           @b2 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x
           self.partie_nulle
@@ -226,13 +272,18 @@ class Game
 
         elsif @turn%2 != 0 && @b2 != "X" && @b2 != "O"
           @b2 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
@@ -240,6 +291,11 @@ class Game
     when "B3"
         if @turn%2 == 0 && @b3 != "X" && @b3 != "O"
           @b3 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x
           self.partie_nulle
@@ -247,13 +303,18 @@ class Game
 
         elsif @turn%2 != 0 && @b3 != "X" && @b3 != "O"
           @b3 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
@@ -261,6 +322,11 @@ class Game
     when "C1"
         if @turn%2 == 0 && @c1 != "X" && @c1 != "O"
           @c1 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -268,13 +334,18 @@ class Game
 
         elsif @turn%2 != 0 && @c1 != "X" && @c1 != "O"
           @c1 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
@@ -282,6 +353,11 @@ class Game
     when "C2"
         if @turn%2 == 0 && @c2 != "X" && @c2 != "O"
           @c2 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -289,13 +365,18 @@ class Game
 
         elsif @turn%2 != 0 && @c2 != "X" && @c2 != "O"
           @c2 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
@@ -303,6 +384,11 @@ class Game
     when "C3"
         if @turn%2 == 0 && @c3 != "X" && @c3 != "O"
           @c3 = "X"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_x 
           self.partie_nulle
@@ -310,20 +396,25 @@ class Game
 
         elsif @turn%2 != 0 && @c3 != "X" && @c3 != "O"
           @c3 = "O"
+          if @piontf
+            @piontf = false
+          else
+            @piontf = true
+          end
           self.board_show
           self.victory_o
           self.partie_nulle
           @turn += 1
 
         else 
-          puts  "          occupé, rejoue"
+          puts  "          !! occupé, rejoue !!"
           self.board_show  
 
         end
     else
-      puts "            ~~~~~~~~~~"
-      puts "               ERROR"
-      puts "Rejoue. 'LigneColonne', exemple 'A1'"
+      puts "              ~~~~~~~~~~"
+      puts "                 ERROR"
+      puts "  Rejoue. 'LigneColonne', exemple 'A1'"
     end
 
   end

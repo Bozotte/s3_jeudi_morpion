@@ -23,7 +23,16 @@ class Controller
   def update_game
     i = @game.turn_game
 
-    while i < 30
+    while i < 300
+      if @game.piontf
+        puts "              ~~~~~~~~~~"
+        puts "    Où souhaites tu jouer #{@view.players.values[1]}?"
+        puts "              ~~~~~~~~~~"
+      else 
+        puts "              ~~~~~~~~~~"
+        puts "    Où souhaites tu jouer #{@view.players.values[0]}?"
+        puts "              ~~~~~~~~~~"
+      end
     user_choice = @view.choice_player
     @game.board_update(user_choice)
       if @game.win
