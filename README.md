@@ -11,12 +11,19 @@ https://github.com/Yacinth/s3_jeudi_morpion
 $ ruby app.rb
 ```
 
-### régles ###
+### Régles ###
+Les joueurs :
+* Joueur 1 a les pions X
+* Joueur 2 a les pions O
 
-Joueur 1 a les pions X
-Joueur 2 a les pions O
+En tout tu as 8 conditions de victoire possibles :
+* Aligner 3 symboles identiques en horyzontale (3)
+* ou en verticale (3)
+* ou en diagonale (2)
 
-8 conditions de victoire :
-Aligner 3 symboles identiques en horyzontale, ou en verticale ou en diagonale
+Partie nulle :
+* Si les deux joueurs ont un niveau équivalent, le board se remplit sans aligner 3 symboles identiques
+
+### coucou les correcteurs 
 
 
