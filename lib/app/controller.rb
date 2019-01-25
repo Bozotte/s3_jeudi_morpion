@@ -12,11 +12,9 @@ class Controller
   end
 
   def create_game
-
     @view.create_player
     @view.create_game
     @game.case_init
-    @game.board_init
     @view.game_update
     @game.board_show
     self.update_game    
