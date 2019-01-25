@@ -36,7 +36,13 @@ class Controller
     user_choice = @view.choice_player
     @game.board_update(user_choice)
       if @game.win
+        if @game.piontf
+          puts "     #{@view.players.values[0]} CHAMPION.NE"
+        else
+          puts "     #{@view.players.values[1]} CHAMPION.NE"
+        end
         Router.new.perform
+      
       elsif @game.nulle
         Router.new.perform
       end
