@@ -1,4 +1,5 @@
-# XTREM GOLDEN MORPION 300" #
+# XTREM GOLDEN MORPION 300 #
+(https://media.giphy.com/media/35B3Val0pYgtpScqsz/giphy.gif)
 
 Creation d'un jeu de morpion en Peer Programming, dream team :
 ~~ Cynthia Jacquelet @Yacinth & William Spartacus @Willyspa ~~
