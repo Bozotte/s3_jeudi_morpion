@@ -37,9 +37,9 @@ class Controller
     @game.board_update(user_choice)
       if @game.win
         if @game.piontf
-          puts "     #{@view.players.values[0]} CHAMPION.NE"
+          puts "** #{@view.players.values[0]} CHAMPION.NE. Une derniere... **"
         else
-          puts "     #{@view.players.values[1]} CHAMPION.NE"
+          puts "** #{@view.players.values[1]} CHAMPION.NE. Une derniere... **"
         end
         Router.new.perform
       
