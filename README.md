@@ -1,3 +1,4 @@
+![](https://media0.giphy.com/media/2zeji2UedvZzvIZ45N/giphy.gif?cid=3640f6095c4a8a4d6b6958366767066f)
 # XTREM GOLDEN MORPION 300 #
 
 Creation d'un jeu de morpion en Peer Programming, dream team :
@@ -11,8 +12,6 @@ https://github.com/Yacinth/s3_jeudi_morpion
 ```ruby
 $ ruby app.rb
 ```
-![](https://media0.giphy.com/media/2zeji2UedvZzvIZ45N/giphy.gif?cid=3640f6095c4a8a4d6b6958366767066f)
-
 ### Les Bails ###
 Les joueurs :
 * Joueur 1 s'enregistre et joue les pions X
