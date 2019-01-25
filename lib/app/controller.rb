@@ -27,16 +27,15 @@ class Controller
 
     while i < 30
     user_choice = @view.choice_player
-    
-    puts "345"
     @game.board_update(user_choice)
-    
+      if @game.win
+        Router.new.perform
+      elsif @game.nulle
+        Router.new.perform
+      end
     i += 1    
     end
-    
-    
   end
-
 
 end
   
